@@ -1,1 +1,1 @@
-I create websites on topics I'm currently learning and upload the web-code to this repository. These websites primarily serve as learning materials for myself. This approach allows me to enhance my web development skills while exploring and learning about new topics.
+I create websites on topics I'm currently learning and upload their web-code to this repository. These websites primarily serve as learning materials for myself. This approach allows me to enhance my web development skills while exploring and learning about new topics.
