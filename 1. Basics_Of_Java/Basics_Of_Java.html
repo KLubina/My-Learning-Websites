@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basics of Java</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Data Types</h1>
+        <p>primitive datatypes</p>
+            <p>boolean</p>
+            <p>byte</p>
+            <p>char</p>
+            <p>short</p>
+            <p>int</p>
+            <p>float</p>
+            <p>double</p>
+        <h1>Basic Syntax-Symbols in Java</h1>
+        <h1>Control Structures</h1>
+        <h2>if-else</h2>
+            <p>public class If-Else-Example-GradeEvaluator {</p>
+                <p>public String evaluateGrade(int score) {</p>
+                    <p>if (score >=90) {</p>
+                        <p>return "Excellent";</p>
+                    <p>} else if (score >= 75) {</p>
+                        <p>return "Good";</p>
+                    <p>} else if (score>=50)</p>
+                        <p>return "Pass";</p>
+                    <p>} else {</p>
+                        <p>return "Fail";</p>
+                    <p>}</p>
+                <p>}</p>
+
+                <p>public static void mai(String[]args) {
+                    <p>If-Else-Example-GradeEvaluator = new IfElseExampleGradeEvaluator();</p>
+                    <p>int score = 88;</p>
+                    <p>System.out.println(if-Else-Example-GradeEvaluator.evaluateGrade(score));</p>
+                <p>}</p>
+            <p>}</p>
+        <h2>switch-case</h2>
+            <p>public class DayOfWeek {</p>
+                <p>public String getDay(int day){</p>
+                    <p>String dayName;</p>
+                    <p>switch (day) {</p>
+                        <p>case 1: dayName = "Sunday"; break;</p>
+                        <p>case 2: dayName = "Monday"; break;</p>
+                        <p>case 3: dayName = "Tuesday"; break;</p>
+                        <p>case 4: dayName = "Wednesday"; break;</p>
+                        <p>case 5: dayName = "Thursday"; break;</p>
+                        <p>case 6: dayName = "Friday"; break;</p>
+                        <p>case 7: dayName = "Saturday"; break;</p>
+                        <p>default: dayName = "Invalid day";</p>
+                    <p>}</p>
+                    <p>return dayName;</p>
+                <p>}</p>
+                <p>public static void main(String[] args) {</p>
+                    <p>DayOfWeek dayOfWeek = new DayOfWeek();</p>
+                    <p>System.out.println(dayOfWeek.getDay(1));</p>
+                <p>}</p>
+            <p>}</p>
+        <h2>while</h2>
+            <p>public class Countdown {</p>
+                <p>public void countDown(int start) {</p>
+                    <p>while (start > 0) {</p>
+                        <p>System.out.println("Countdown: " + start);</p>
+                        <p>start--;</p>
+                    <p>}</p>
+                <p>}</p>
+                <p>public static void main(String[] args) {</p>
+                    <p>Countdown countdown = new Countdown();</p>
+                    <p>countdown.countDown(10);</p>
+                <p>}</p>
+            <p>}</p>
+        <h2>do-while</h2>
+            <p>public class GuessNumber {</p>
+                <p>public void guessUntilCorrect(int guess) {</p>
+                    <p>int answer = 7;</p>
+                    <p>do {</p>
+                        <p>if (guess == answer) {</p>
+                            <p>System.out.println("Correct Guess!");</p>
+                        <p>} else {</p>
+                            <p>System.out.println("Incorrect, try again!");</p>
+                            <p>guess++;</p>
+                        <p>}</p>
+                    <p>} while (guess!= answer);</p>
+                <p>}</p>
+                <p>public static void main(String[] args) {</p>
+                    <p>GuessNumber guessNumber = new GuessNumber();</p>
+                    <p>guessNumber.guessUntilCorrect(1);</p>
+                <p>}</p>
+            <p>}</p>
+        <h2>for-loop</h2>
+            <p>public class NumberPrinter {</p>
+                <p>public void printNumbers(int max) {</p>
+                    <p> for (int i = 1; i <= max; i++) {</p>
+                        <p>System.out.println("Number: " + i);</p>
+                    <p>}</p>
+                <p>}</p>
+
+                <p>public static void main(String[] args) {</p>
+                    <p>NumberPrinter numberPrinter = new NumberPrinter();</p>
+                    <p>numberPrinter.printNumbers(5);</p>
+                <p>}</p>
+            <p>}</p>
+        <h2>enhanced for-loop</h2>
+            <p>public class ArraySum {</p>
+                <p>public int sum(int[] numbers) {</p>
+                    <p>int total = 0;</p>
+                    <p>for (int number : numbers) {</p>
+                        <p>total += number;</p>
+                    <p>}</p>
+                    <p>return total;</p>
+                <p>}</p>
+                <p>public static void main(String[] args) {</p>
+                    <p>int[] numbers = {1, 2, 3, 4, 5};</p>
+                    <p>ArraySum arraySum = new ArraySum();</p>
+                    <p>System.out.println("Sum of Array: " + arraySum.sum(numbers));</p>
+                <p>}</p>
+        <h1>Error Handling</h1>
+        <p>try</p>
+        <p>catch</p>
+        <p>throw</p>
+    </body>
+</html>
