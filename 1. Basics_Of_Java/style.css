@@ -1,4 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically if needed */
+    height: 100vh;            /* Optional: Takes full viewport height */
+  }
+  
 img {
+    display: block;
+    margin: 0 auto;
     transform: scale(0.5);
 }
 
