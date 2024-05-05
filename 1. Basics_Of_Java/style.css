@@ -76,6 +76,17 @@ button:hover, .button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow on hover */
 }
 
+.image-responsive {
+    width: 100%;      /* Passt sich der Breite des Containers an */
+    max-width: 600px; /* Maximale Breite */
+    height: auto;     /* Höhe passt sich automatisch an, um das Seitenverhältnis zu bewahren */
+}
+
+.resized-image {
+    width: 200px;
+    height: auto; /* Behält das Seitenverhältnis bei */
+  }
+
 /* Media query for responsive design */
 @media (max-width: 768px) {
     body {
@@ -89,5 +100,9 @@ button:hover, .button:hover {
     .container {
         width: auto;
         padding: 0;
+    }
+
+    .image-responsive {
+        max-width: 300px; /* Adjust max-width for smaller screens */
     }
 }
