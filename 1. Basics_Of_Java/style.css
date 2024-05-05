@@ -1,3 +1,7 @@
+img {
+    transform: scale(0.5);
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f4f4f6; /* Lighter gray for softer look */
@@ -43,7 +47,7 @@ pre, code {
     border: 1px solid #ccc; /* Subtle border */
     border-radius: 5px;
     padding: 10px; /* More padding for readability */
-    display: block; /* Ensure it behaves as block */
+    display:block;
     white-space: pre-wrap; /* Ensures that pre tag does not break layout */
     word-wrap: break-word; /* Ensures long lines wrap */
     margin: 10px 0; /* Space around code blocks */
@@ -76,18 +80,8 @@ button:hover, .button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow on hover */
 }
 
-.image-responsive {
-    width: 100%;      /* Passt sich der Breite des Containers an */
-    max-width: 600px; /* Maximale Breite */
-    height: auto;     /* Höhe passt sich automatisch an, um das Seitenverhältnis zu bewahren */
-}
 
-.resized-image {
-    width: 200px;
-    height: auto; /* Behält das Seitenverhältnis bei */
-  }
 
-/* Media query for responsive design */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -95,14 +89,5 @@ button:hover, .button:hover {
 
     h1, h2 {
         font-size: 90%; /* Smaller fonts on smaller screens */
-    }
-
-    .container {
-        width: auto;
-        padding: 0;
-    }
-
-    .image-responsive {
-        max-width: 300px; /* Adjust max-width for smaller screens */
     }
 }
