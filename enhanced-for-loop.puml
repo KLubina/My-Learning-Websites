@@ -1,0 +1,9 @@
+@startuml
+start
+:Initialisieren: total = 0;
+foreach (number in numbers)
+    :total += number;
+end foreach
+:Rückgabe total;
+stop
+@enduml
