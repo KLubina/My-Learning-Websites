@@ -1,0 +1,12 @@
+@startuml
+start
+:Create Countdown object;
+:Start = 10;
+
+while (Start > 0) is (true)
+  :Print "Countdown: " + Start;
+  :Start = Start - 1;
+endwhile (false)
+
+stop
+@enduml
