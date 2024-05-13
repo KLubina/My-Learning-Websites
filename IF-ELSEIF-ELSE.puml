@@ -1,0 +1,22 @@
+@startuml
+start
+:Create GradeEvaluator object;
+:Score = 88;
+
+if (Score >= 90) then (yes)
+  :Return "Excellent" (IF);
+else (no)
+  if (Score >= 75) then (yes)
+    :Return "Good" (ELSE IF);
+  else (no)
+    if (Score >= 50) then (yes)
+      :Return "Pass" (ELSE IF);
+    else (no)
+      :Return "Fail" (ELSE);
+    endif
+  endif
+endif
+
+:Print Grade Evaluation;
+stop
+@enduml

@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically if needed */
+    height: 100vh;            /* Optional: Takes full viewport height */
+  }
+  
+img {
+    display: block;
+    margin: 0 auto;
+    transform: scale(0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f6; /* Lighter gray for softer look */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    max-width: 1200px; /* Constraint overall width for better reading on large screens */
+    margin: auto; /* Center the content */
+}
+
+h1, h2 {
+    font-weight: 300; /* Lighter font-weight for modern look */
+    margin-top: 40px; /* More space around headers to define sections clearly */
+}
+
+h1 {
+    color: #0056b3; /* Slightly darker blue for better contrast */
+    font-size: 28px; /* Larger font size for main titles */
+}
+
+h2 {
+    color: #6c757d; /* Soften the grey to reduce strain */
+    font-size: 22px; /* Slightly larger for subheaders */
+}
+
+p {
+    margin: 5px 0;
+    padding: 2px 10px;
+    background-color: #fff;
+    border-left: 4px solid #007bff; /* More pronounced border color */
+    box-shadow: 2px 2px 5px #f0f0f0; /* Subtle shadow for depth */
+}
+
+p:hover {
+    background-color: #e9ecef; /* Keep hover effect subtle */
+}
+
+/* Enhanced styling for code elements */
+pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fdfdfd; /* Very light background for contrast */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px;
+    padding: 10px; /* More padding for readability */
+    display:block;
+    white-space: pre-wrap; /* Ensures that pre tag does not break layout */
+    word-wrap: break-word; /* Ensures long lines wrap */
+    margin: 10px 0; /* Space around code blocks */
+    overflow-x: auto; /* Horizontal scroll for long lines */
+    font-size: 95%; /* Slightly smaller font for code */
+}
+
+/* Additional hover effect for code blocks to increase focus */
+code:hover {
+    background-color: #f6f6f6;
+    border-color: #bebfc2;
+}
+
+/* Styling adjustments for buttons and links */
+button, .button {
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font for better legibility */
+}
+
+button:hover, .button:hover {
+    background-color: #025aa5;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow on hover */
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 90%; /* Smaller fonts on smaller screens */
+    }
+}

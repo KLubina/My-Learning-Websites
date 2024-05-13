@@ -1,0 +1,9 @@
+@startuml
+start
+:Initialisieren: i = 1;
+while (i <= max) is (ja)
+    :Ausgabe: "Number: " + i;
+    :i++;
+endwhile (nein)
+stop
+@enduml

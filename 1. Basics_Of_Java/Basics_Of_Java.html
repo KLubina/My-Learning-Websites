@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basics of Java</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Data Types</h1>
+        <p>primitive datatypes</p>
+            <p>boolean</p>
+            <p>byte</p>
+            <p>char</p>
+            <p>short</p>
+            <p>int</p>
+            <p>float</p>
+            <p>double</p>
+        <h1>Basic Syntax-Symbols in Java</h1>
+        <pre><code>public class BasicSyntaxDemo {
+
+            // Example of various primitive data types
+            private int number;
+            private boolean flag;
+            private char character;
+            private double floatingPointNumber;
+        
+            // Constructor to initialize class fields
+            public BasicSyntaxDemo(int number, boolean flag, char character, double floatingPointNumber) {
+                this.number = number;
+                this.flag = flag;
+                this.character = character;
+                this.floatingPointNumber = floatingPointNumber;
+            }
+        
+            // Method to demonstrate conditional logic
+            public String evaluateNumber() {
+                if (number > 0) {
+                    return "Positive";
+                } else if (number == 0) {
+                    return "Zero";
+                } else {
+                    return "Negative";
+                }
+            }
+        
+            // Method to demonstrate loop structures
+            public void printNumbers(int count) {
+                // for loop
+                for (int i = 1; i <= count; i++) {
+                    System.out.println("Number: " + i);
+                }
+        
+                // Enhanced for loop with an array
+                int[] numbers = {1, 2, 3, 4, 5};
+                for (int num : numbers) {
+                    System.out.print(num + " ");
+                }
+                System.out.println(); // Move to the next line after loop
+            }
+        
+            // Main method to run some tests
+            public static void main(String[] args) {
+                BasicSyntaxDemo demo = new BasicSyntaxDemo(5, true, 'A', 3.14);
+        
+                // Test evaluateNumber method
+                System.out.println("The number is: " + demo.evaluateNumber());
+        
+                // Test printNumbers method
+                demo.printNumbers(5);
+            }
+        }
+        </code></pre>        
+        
+        <p>{ }</p>
+        <p>( )</p>
+        <p>public/private/protected</p>
+        <p>;</p>
+        <p>++, --</p>
+        
+        <h1>Control Structures</h1>
+        <h2>if-else</h2>
+        <img src="images/Control-Structures/flow-diagram-of-if-else-statement.webp" alt="Flow Diagram of if-else Statement">
+        <pre><code>public class GradeEvaluator {
+            public String evaluateGrade(int score) {
+                if (score >= 90) {
+                    return "Excellent";
+                } else if (score >= 75) {
+                    return "Good";
+                } else if (score >= 50) {
+                    return "Pass";
+                } else {
+                    return "Fail";
+                }
+            }
+        
+            public static void main(String[] args) {
+                GradeEvaluator evaluator = new GradeEvaluator();
+                int score = 88;
+                System.out.println("Grade Evaluation: " + evaluator.evaluateGrade(score));
+            }
+        }</code></pre>
+        
+
+        
+        <h2>switch-case</h2>
+        <img src="images/Control-Structures/flow-diagram-of-switch-statement.webp" alt="Flow Diagram of Switch Case Statement">
+        <pre><code>public class DayOfWeek {
+            public String getDay(int day) {
+                String dayName;
+                switch (day) {
+                    case 1: dayName = "Sunday"; break;
+                    case 2: dayName = "Monday"; break;
+                    case 3: dayName = "Tuesday"; break;
+                    case 4: dayName = "Wednesday"; break;
+                    case 5: dayName = "Thursday"; break;
+                    case 6: dayName = "Friday"; break;
+                    case 7: dayName = "Saturday"; break;
+                    default: dayName = "Invalid day"; break;
+                }
+                return dayName;
+            }
+        
+            public static void main(String[] args) {
+                DayOfWeek dayOfWeek = new DayOfWeek();
+                System.out.println(dayOfWeek.getDay(1));
+            }
+        }</code></pre>
+        <h2>while</h2>
+        <img src="images/Control-Structures/flow-diagram-of-loop-statement.webp" alt="Flow Diagram of While Loop">
+        <pre><code>public class Countdown {
+            public void countDown(int start) {
+                while (start > 0) {
+                    System.out.println("Countdown: " + start);
+                    start--;
+                }
+            }
+        
+            public static void main(String[] args) {
+                Countdown countdown = new Countdown();
+                countdown.countDown(10);
+            }
+        }</code></pre>
+        <h2>do-while</h2>
+        <img src="images/Control-Structures/flow-diagram-of-do-while-loop-statement.webp" alt="Flow Diagram of Do-While Loop">
+        <pre><code>public class GuessNumber {
+            public void guessUntilCorrect(int guess) {
+                int answer = 7;
+                do {
+                    if (guess == answer) {
+                        System.out.println("Correct Guess!");
+                    } else {
+                        System.out.println("Incorrect, try again!");
+                        guess++;
+                    }
+                } while (guess != answer);
+            }
+        
+            public static void main(String[] args) {
+                GuessNumber guessNumber = new GuessNumber();
+                guessNumber.guessUntilCorrect(1);
+            }
+        }</code></pre>
+        <h2>for-loop</h2>
+        <img src="images/Control-Structures/flow-diagram-of-for-loop-statement.webp" alt="Flow Diagram of For Loop">
+        <pre><code>public class NumberPrinter {
+            public void printNumbers(int max) {
+                for (int i = 1; i <= max; i++) {
+                    System.out.println("Number: " + i);
+                }
+            }
+        
+            public static void main(String[] args) {
+                NumberPrinter numberPrinter = new NumberPrinter();
+                numberPrinter.printNumbers(5);
+            }
+        }</code></pre>
+        <h2>enhanced for-loop</h2>
+        <img src="images/Control-Structures/flow-diagram-of-for-each-loop-statement.webp" alt="Flow Diagram of Enhanced For Loop">
+        <pre><code>public class ArraySum {
+            public int sum(int[] numbers) {
+                int total = 0;
+                for (int number : numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        
+            public static void main(String[] args) {
+                int[] numbers = {1, 2, 3, 4, 5};
+                ArraySum arraySum = new ArraySum();
+                System.out.println("Sum of Array: " + arraySum.sum(numbers));
+            }
+        }</code></pre>        
+        <h1>Error Handling</h1>
+        <p>try</p>
+        <p>catch</p>
+        <p>throw</p>
+    </body>
+</html>
