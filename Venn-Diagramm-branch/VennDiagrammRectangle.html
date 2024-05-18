@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Venn Diagram with Rectangles using D3.js</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    .venn-rect {
+      fill-opacity: 0.5;
+    }
+    .venn-rect.set1 {
+      fill: red;
+    }
+    .venn-rect.set2 {
+      fill: green;
+    }
+    .venn-rect.set3 {
+      fill: blue;
+    }
+    .label {
+      font-size: 14px;
+      fill: black;
+    }
+  </style>
+</head>
+<body>
+  <svg width="600" height="400"></svg>
+  <script>
+    // Erstelle das SVG-Element
+    var svg = d3.select("svg");
+
+    // Definiere die Rechtecke
+    var rectangles = [
+      { x: 50, y: 50, width: 200, height: 150, class: 'set1', label: 'Set 1' },
+      { x: 150, y: 100, width: 200, height: 150, class: 'set2', label: 'Set 2' },
+      { x: 100, y: 200, width: 200, height: 150, class: 'set3', label: 'Set 3' }
+    ];
+
+    // Füge die Rechtecke zum SVG hinzu
+    svg.selectAll("rect")
+      .data(rectangles)
+      .enter()
+      .append("rect")
+      .attr("x", d => d.x)
+      .attr("y", d => d.y)
+      .attr("width", d => d.width)
+      .attr("height", d => d.height)
+      .attr("class", d => "venn-rect " + d.class);
+
+    // Füge die Labels hinzu
+    svg.selectAll("text")
+      .data(rectangles)
+      .enter()
+      .append("text")
+      .attr("x", d => d.x + d.width / 2)
+      .attr("y", d => d.y + d.height / 2)
+      .attr("class", "label")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .text(d => d.label);
+  </script>
+</body>
+</html>
