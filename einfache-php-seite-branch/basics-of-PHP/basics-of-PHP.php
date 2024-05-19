@@ -3,6 +3,7 @@
 <head>
   <meta charset ="UTF-8">
   <title>Basics Of PHP</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
       <h1>PHP Grundlagen</h1>
