@@ -1,0 +1,15 @@
+@startuml
+start
+:Initialisieren: guess = Parameter;
+:Initialisieren: answer = 7;
+repeat
+    if (guess == answer) then (ja)
+        :Ausgabe: "Correct Guess!";
+        stop
+    else (nein)
+        :Ausgabe: "Incorrect, try again!";
+        :guess++;
+    endif
+repeat while (guess != answer)
+stop
+@enduml
