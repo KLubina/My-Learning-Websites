@@ -1,57 +1,57 @@
-/* Allgemeine Stile */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --header-background-color: #333;
+    --header-text-color: #fff;
+    --link-color: #0056b3;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Header-Stile */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
     padding: 10px 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
     margin: 0 10px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: var(--header-text-color);
     text-decoration: none;
 }
 
-/* Hauptinhalt Stile */
 main {
     padding: 20px;
 }
 
-main h2, main h3 {
-    color: #0056b3;
+h2, h3 {
+    color: var(--link-color);
 }
 
-main pre {
+pre {
     background-color: #eee;
     padding: 10px;
 }
 
-/* Footer-Stile */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
     text-align: center;
     padding: 10px 0;
     position: fixed;
