@@ -49,7 +49,7 @@
         <pre>&lt;?php function addieren($a, $b) { return $a + $b; } echo addieren(5, 3); ?&gt;</pre>
     </ul>
 
-    <h2><a href="form_processing.php">Formularverarbeitung</a></h2>
+    <h2><a href="form_process.php">Formularverarbeitung</a></h2>
     <ul>
         <li>Formulardaten können mit den superglobalen Arrays $_GET und $_POST aufgegriffen werden.</li>
         <pre>&lt;form method="post"&gt;&lt;input type="text" name="name" /&gt;&lt;input type="submit" /&gt;&lt;/form&gt;
