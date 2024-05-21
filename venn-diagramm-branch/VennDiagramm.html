@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Venn Diagram with D3.js and venn.js</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://benfred.github.io/venn.js/venn.js"></script>
+  <style>
+    .venn-circle path {
+      stroke-width: 2;
+      stroke: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="venn"></div>
+  <script>
+    // Definiere die Daten für das Venn-Diagramm
+    var sets = [
+      {sets: ['Set 1'], size: 12},
+      {sets: ['Set 2'], size: 12},
+      {sets: ['Set 3'], size: 12},
+      {sets: ['Set 1', 'Set 2'], size: 6},
+      {sets: ['Set 1', 'Set 3'], size: 6},
+      {sets: ['Set 2', 'Set 3'], size: 6},
+      {sets: ['Set 1', 'Set 2', 'Set 3'], size: 3}
+    ];
+
+    // Erstelle das Venn-Diagramm
+    var chart = venn.VennDiagram()
+      .width(500)
+      .height(500);
+
+    d3.select("#venn")
+      .datum(sets)
+      .call(chart);
+
+    // Optional: Anpassung der Textbeschriftungen
+    d3.selectAll("#venn .label")
+      .style("fill", "black")
+      .style("font-size", "14px");
+  </script>
+</body>
+</html>
