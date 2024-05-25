@@ -1,25 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+    line-height: 1.6; /* Verbesserte Zeilenhöhe für bessere Lesbarkeit */
 }
 
 .container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
-    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicherer Schatten */
+    width: 80%; /* Responsivere Breite */
+    max-width: 600px; /* Maximalbreite für größere Bildschirme */
+    margin: 40px auto; /* Mehr Raum oben/unten für eine bessere Zentrierung */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite inkludiert sind */
 }
 
-input[type="text"] {
-    width: 100%;
+input[type="text"], input[type="radio"], button {
+    width: 100%; /* Gleichmäßige Breite für alle Eingabefelder */
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite inkludiert sind */
 }
 
 button {
@@ -30,8 +34,9 @@ button {
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px; /* Größerer Abstand zum oberen Element */
     border-radius: 4px;
+    transition: background-color 0.3s; /* Weiche Farbübergänge bei Hover */
 }
 
 button:hover {
