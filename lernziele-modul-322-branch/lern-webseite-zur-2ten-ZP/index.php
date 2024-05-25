@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>UX Quiz</h1>
+        <h1>Lernspiel 2. ZP Modul 322</h1>
         <?php include 'spiel.php'; ?>
     </div>
     <script src="script.js"></script>
