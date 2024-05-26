@@ -5,5 +5,5 @@ How I access the Website
 3. Copying the PHP files to the folder C:\xampp\htdocs.
 4. In the browser, I enter http://localhost/FILENAME_IN_HTDOCS
 
-http://localhost/einfache-php-seite 
-http://localhost/basics-of-PHP/
+- http://localhost/einfache-php-seite 
+- http://localhost/basics-of-PHP/
