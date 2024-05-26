@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics Of PlantUML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@plantuml/plantuml-encoder@1.4.0/dist/plantuml-encoder.min.js"></script>
+</head>
+<body>
+    <h1>Basics Of PlantUML</h1>
+    <p>PlantUML ist eine Open-Source-Sprache zur Erstellung von UML-Diagrammen. Sie verwendet eine einfache Textsyntax, um verschiedene Arten von Diagrammen zu erstellen.</p>
+
+    <h2>Grundlegende Syntax</h2>
+    <p>Die grundlegende Syntax für ein Flowchart in PlantUML sieht wie folgt aus:</p>
+    <pre>@startuml
+start
+:Erste Aktion;
+:Zweite Aktion;
+if (Entscheidung?) then (Ja)
+  :Dritte Aktion;
+else (Nein)
+  :Vierte Aktion;
+endif
+stop
+@enduml</pre>
+
+<h2>Beispiel-Diagramm</h2>
+<p>Das folgende Diagramm zeigt ein einfaches Flowchart basierend auf dem obigen Code:</p>
+<div class="uml-diagram" id="diagram"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const umlCode = `
+@startuml
+start
+:Erste Aktion;
+:Zweite Aktion;
+if (Entscheidung?) then (Ja)
+  :Dritte Aktion;
+else (Nein)
+  :Vierte Aktion;
+endif
+stop
+@enduml
+        `;
+        const encoded = plantumlEncoder.encode(umlCode);
+        const imgSrc = `https://www.plantuml.com/plantuml/svg/${encoded}`;
+        document.getElementById('diagram').innerHTML = `<img src="${imgSrc}" alt="PlantUML Diagramm">`;
+    });
+</script>
+</body>
+</html>
