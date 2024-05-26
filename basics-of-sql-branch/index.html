@@ -7,93 +7,217 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 20px;
         }
-        .join-diagram {
-            width: 100px;
-            height: 50px;
-            display: inline-block;
-            margin-right: 10px;
-            position: relative;
+        .svg-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        .table {
-            width: 40px;
-            height: 100%;
-            background-color: #8AC007;
-            position: absolute;
+        svg {
+            width: 150px;
+            height: 100px;
+            margin-right: 20px;
         }
-        .table1 {
-            left: 0;
+        pre {
+            margin: 0;
         }
-        .table2 {
-            right: 0;
-            background-color: #0074D9;
+        .sql-commands {
+            margin-top: 40px;
         }
-        .inner-join {
-            width: 20px;
-            height: 100%;
-            background-color: darkgreen;
-            position: absolute;
-            left: 40px;
+        .sql-commands h2 {
+            margin-bottom: 10px;
         }
-        .left-join, .right-join {
-            width: 20px;
-            height: 100%;
-            position: absolute;
-            z-index: -1;
+        .sql-commands ul {
+            list-style-type: none;
+            padding-left: 20px;
         }
-        .left-join {
-            left: 0;
-            background-color: #8AC007;
+        .sql-commands li {
+            margin-bottom: 5px;
         }
-        .right-join {
-            right: 0;
-            background-color: #0074D9;
+        .sql-commands code {
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
     <h1>SQL Joins Visualisiert</h1>
-    <h2>INNER JOIN</h2>
-    <div class="join-diagram">
-        <div class="table table1"></div>
-        <div class="inner-join"></div>
-        <div class="table table2"></div>
-    </div>
-    <pre>SELECT * FROM Tabelle1 INNER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
 
-    <h2>LEFT JOIN</h2>
-    <div class="join-diagram">
-        <div class="table table1"></div>
-        <div class="left-join"></div>
-        <div class="table table2"></div>
-    </div>
-    <pre>SELECT * FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
 
-    <h2>RIGHT JOIN</h2>
-    <div class="join-diagram">
-        <div class="table table1"></div>
-        <div class="right-join"></div>
-        <div class="table table2"></div>
+    <div class="svg-container">
+        <h2>INNER JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="inner-join-desc">
+            <title id="inner-join-desc">INNER JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="lightblue" />
+            <circle cx="25" cy="10" r="10" fill="lightblue" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 INNER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
     </div>
-    <pre>SELECT * FROM Tabelle1 RIGHT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+    
 
-    <h2>FULL OUTER JOIN</h2>
-    <div class="join-diagram">
-        <div class="table table1"></div>
-        <div class="left-join"></div>
-        <div class="right-join"></div>
-        <div class="table table2"></div>
+    <div class="svg-container">
+        <h2>LEFT JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="left-join-desc">
+            <title id="left-join-desc">LEFT JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="lightblue" />
+            <circle cx="25" cy="10" r="10" fill="white" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
     </div>
-    <pre>SELECT * FROM Tabelle1 FULL OUTER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
 
-    <h2>CROSS JOIN</h2>
-    <div class="join-diagram">
-        <div class="table table1" style="width: 80px;"></div>
-        <div class="table table2" style="width: 80px; right: -40px;"></div>
+    <div class="svg-container">
+        <h2>RIGHT JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="right-join-desc">
+            <title id="right-join-desc">RIGHT JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="white" />
+            <circle cx="25" cy="10" r="10" fill="lightblue" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 RIGHT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
     </div>
-    <pre>SELECT * FROM Tabelle1 CROSS JOIN Tabelle2;</pre>
 
+    <div class="svg-container">
+        <h2>FULL OUTER JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="full-outer-join-desc">
+            <title id="full-outer-join-desc">FULL OUTER JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="lightblue" />
+            <circle cx="25" cy="10" r="10" fill="lightblue" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 FULL OUTER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+    </div>
+
+    <div class="svg-container">
+        <h2>LEFT JOIN EXCLUDING INNER JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="left-join-excluding-inner-join-desc">
+            <title id="left-join-excluding-inner-join-desc">LEFT JOIN EXCLUDING INNER JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="lightblue" />
+            <circle cx="25" cy="10" r="10" fill="white" />
+            <clipPath id="clip-left">
+                <circle cx="25" cy="10" r="10" />
+            </clipPath>
+            <circle cx="15" cy="10" r="10" fill="white" clip-path="url(#clip-left)" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id WHERE Tabelle2.id IS NULL;</pre>
+    </div>
+
+    <div class="svg-container">
+        <h2>RIGHT JOIN EXCLUDING INNER JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="right-join-excluding-inner-join-desc">
+            <title id="right-join-excluding-inner-join-desc">RIGHT JOIN EXCLUDING INNER JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="white" />
+            <circle cx="25" cy="10" r="10" fill="lightblue" />
+            <clipPath id="clip-right">
+                <circle cx="15" cy="10" r="10" />
+            </clipPath>
+            <circle cx="25" cy="10" r="10" fill="white" clip-path="url(#clip-right)" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 RIGHT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id WHERE Tabelle1.id IS NULL;</pre>
+    </div>
+
+    <div class="svg-container">
+        <h2>FULL OUTER JOIN EXCLUDING INNER JOIN</h2>
+        <svg viewBox="0 0 40 20" aria-labelledby="full-outer-join-excluding-inner-join-desc">
+            <title id="full-outer-join-excluding-inner-join-desc">FULL OUTER JOIN EXCLUDING INNER JOIN</title>
+            <circle cx="15" cy="10" r="10" fill="lightblue" />
+            <circle cx="25" cy="10" r="10" fill="lightblue" />
+            <clipPath id="clip-full">
+                <circle cx="20" cy="10" r="10" />
+            </clipPath>
+            <circle cx="15" cy="10" r="10" fill="white" clip-path="url(#clip-full)" />
+            <circle cx="25" cy="10" r="10" fill="white" clip-path="url(#clip-full)" />
+            <circle cx="15" cy="10" r="10" fill="none" stroke="black" />
+            <circle cx="25" cy="10" r="10" fill="none" stroke="black" />
+        </svg>
+        <pre>SELECT * FROM Tabelle1 FULL OUTER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id WHERE Tabelle1.id IS NULL OR Tabelle2.id IS NULL;</pre>
+    </div>
+    <h1>SQL Kommandos</h1>
+    <div class="sql-commands">
+        <h2>DDL (Data Definition Language)</h2>
+        <ul>
+            <li>CREATE
+                <code>CREATE TABLE table_name (column1 datatype, column2 datatype, ...);</code>
+            </li>
+            <li>DROP
+                <code>DROP TABLE table_name;</code>
+            </li>
+            <li>ALTER
+                <code>ALTER TABLE table_name ADD column_name datatype;</code>
+            </li>
+            <li>TRUNCATE
+                <code>TRUNCATE TABLE table_name;</code>
+            </li>
+        </ul>
+
+        <h2>DML (Data Manipulation Language)</h2>
+        <ul>
+            <li>INSERT
+                <code>INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);</code>
+            </li>
+            <li>UPDATE
+                <code>UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;</code>
+            </li>
+            <li>DELETE
+                <code>DELETE FROM table_name WHERE condition;</code>
+            </li>
+            <li>CALL
+                <code>CALL procedure_name (parameter1, parameter2, ...);</code>
+            </li>
+            <li>EXPLAIN CALL
+                <code>EXPLAIN CALL procedure_name (parameter1, parameter2, ...);</code>
+            </li>
+            <li>LOCK
+                <code>LOCK TABLE table_name IN {SHARED|EXCLUSIVE} MODE;</code>
+            </li>
+        </ul>
+
+        <h2>TCL (Transaction Control Language)</h2>
+        <ul>
+            <li>COMMIT
+                <code>COMMIT;</code>
+            </li>
+            <li>SAVEPOINT
+                <code>SAVEPOINT savepoint_name;</code>
+            </li>
+            <li>ROLLBACK
+                <code>ROLLBACK TO savepoint_name;</code>
+            </li>
+            <li>SET TRANSACTION
+                <code>SET TRANSACTION {READ ONLY|READ WRITE};</code>
+            </li>
+            <li>SET CONSTRAINT
+                <code>SET CONSTRAINTS constraint_name {DEFERRED|IMMEDIATE};</code>
+            </li>
+        </ul>
+
+        <h2>DQL (Data Query Language)</h2>
+        <ul>
+            <li>SELECT
+                <code>SELECT column1, column2, ... FROM table_name WHERE condition;</code>
+            </li>
+        </ul>
+
+        <h2>DCL (Data Control Language)</h2>
+        <ul>
+            <li>GRANT
+                <code>GRANT privilege_name ON object TO {user|role};</code>
+            </li>
+            <li>REVOKE
+                <code>REVOKE privilege_name ON object FROM {user|role};</code>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
