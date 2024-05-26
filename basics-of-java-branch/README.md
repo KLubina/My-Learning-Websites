@@ -2,4 +2,6 @@ use this page
 
 https://raw.githack.com/
 
-https://rawcdn.githack.com/KLubina/My-Learning-Websites/2f5184f07c6c45cf8c0945462ffe45318761136e/1.%20Basics_Of_Java/Basics_Of_Java.html
+Basics of Java learning-website: https://rawcdn.githack.com/KLubina/My-Learning-Websites/94fcd14c135b84167185b46ddf43a534553fcf23/basics-of-java-branch/basics_of_java_learning-website/index.html
+
+Making websites with Java learning-website: https://rawcdn.githack.com/KLubina/My-Learning-Websites/ad7e2be47dbf3073bd03303f76c800425721456a/basics-of-java-branch/making_websites_with_java-learning-website/index.html
