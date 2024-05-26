@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Joins Visualisiert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .join-diagram {
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+        }
+        .table {
+            width: 40px;
+            height: 100%;
+            background-color: #8AC007;
+            position: absolute;
+        }
+        .table1 {
+            left: 0;
+        }
+        .table2 {
+            right: 0;
+            background-color: #0074D9;
+        }
+        .inner-join {
+            width: 20px;
+            height: 100%;
+            background-color: darkgreen;
+            position: absolute;
+            left: 40px;
+        }
+        .left-join, .right-join {
+            width: 20px;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .left-join {
+            left: 0;
+            background-color: #8AC007;
+        }
+        .right-join {
+            right: 0;
+            background-color: #0074D9;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Joins Visualisiert</h1>
+    <h2>INNER JOIN</h2>
+    <div class="join-diagram">
+        <div class="table table1"></div>
+        <div class="inner-join"></div>
+        <div class="table table2"></div>
+    </div>
+    <pre>SELECT * FROM Tabelle1 INNER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+
+    <h2>LEFT JOIN</h2>
+    <div class="join-diagram">
+        <div class="table table1"></div>
+        <div class="left-join"></div>
+        <div class="table table2"></div>
+    </div>
+    <pre>SELECT * FROM Tabelle1 LEFT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+
+    <h2>RIGHT JOIN</h2>
+    <div class="join-diagram">
+        <div class="table table1"></div>
+        <div class="right-join"></div>
+        <div class="table table2"></div>
+    </div>
+    <pre>SELECT * FROM Tabelle1 RIGHT JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+
+    <h2>FULL OUTER JOIN</h2>
+    <div class="join-diagram">
+        <div class="table table1"></div>
+        <div class="left-join"></div>
+        <div class="right-join"></div>
+        <div class="table table2"></div>
+    </div>
+    <pre>SELECT * FROM Tabelle1 FULL OUTER JOIN Tabelle2 ON Tabelle1.id = Tabelle2.id;</pre>
+
+    <h2>CROSS JOIN</h2>
+    <div class="join-diagram">
+        <div class="table table1" style="width: 80px;"></div>
+        <div class="table table2" style="width: 80px; right: -40px;"></div>
+    </div>
+    <pre>SELECT * FROM Tabelle1 CROSS JOIN Tabelle2;</pre>
+
+</body>
+</html>
