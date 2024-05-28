@@ -1,0 +1,27 @@
+@startuml
+start
+:Create DayOfWeek object;
+:Day = 1;
+
+switch (Day)
+case (1)
+  :DayName = "Sunday";
+case (2)
+  :DayName = "Monday";
+case (3)
+  :DayName = "Tuesday";
+case (4)
+  :DayName = "Wednesday";
+case (5)
+  :DayName = "Thursday";
+case (6)
+  :DayName = "Friday";
+case (7)
+  :DayName = "Saturday";
+case (default)
+  :DayName = "Invalid day";
+
+endswitch
+:Print DayName;
+stop
+@enduml

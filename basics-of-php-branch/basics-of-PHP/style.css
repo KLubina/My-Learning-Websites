@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fafafa;
+    color: #333;
+}
+
+h1 {
+    color: #2a2a2a;
+    font-size: 24px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2a2a2a;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border-left: 3px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    overflow: auto; /* Für lange Codezeilen */
+    font-family: Consolas, 'Courier New', monospace;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: calc(100% - 32px); /* Breite Anpassung */
+    box-sizing: border-box; /* Border und Padding inkludieren */
+}
+
+input[type="text"] {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+
+input[type="submit"] {
+    border-radius: 0 0 5px 5px;
+    background-color: #5c67f2;
+    color: #fff;
+    cursor: pointer;
+    border-top: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #6c74f8;
+}
+
+/* Responsives Layout */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    pre {
+        padding: 8px;
+    }
+}
