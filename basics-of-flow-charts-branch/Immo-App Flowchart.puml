@@ -1,0 +1,47 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE SplashScreen {
+  - Suchfunktion
+  - Kartenfunktion
+  - Login
+  - Registrierung
+  - Filter
+  - Liste der vorgeschlagenen Immobilien
+}
+
+RECTANGLE DirectSearch
+RECTANGLE SetFilter
+RECTANGLE ViewListingDetails
+RECTANGLE ViewSimilarListings
+RECTANGLE ShowLocation
+RECTANGLE MapFunction
+RECTANGLE Registration
+RECTANGLE ConfirmCode
+RECTANGLE LoginProfile
+RECTANGLE SavedListings
+RECTANGLE AccountSettings
+RECTANGLE ViewOwnListing
+RECTANGLE AppSettings
+
+SplashScreen --> DirectSearch : Navigate
+SplashScreen --> SetFilter : Navigate
+SplashScreen --> MapFunction : Navigate
+SplashScreen --> Registration : Navigate
+SplashScreen --> LoginProfile : Navigate
+
+DirectSearch --> SetFilter : Navigate
+SetFilter --> ViewSimilarListings : Navigate
+ViewSimilarListings --> ViewListingDetails : Navigate
+ViewListingDetails --> ShowLocation : Navigate
+
+MapFunction --> ViewListingDetails : Navigate
+
+Registration --> ConfirmCode : Navigate
+ConfirmCode --> LoginProfile : Navigate
+
+LoginProfile --> SavedListings : Navigate
+LoginProfile --> AccountSettings : Navigate
+LoginProfile --> ViewOwnListing : Navigate
+LoginProfile --> AppSettings : Navigate
+@enduml
