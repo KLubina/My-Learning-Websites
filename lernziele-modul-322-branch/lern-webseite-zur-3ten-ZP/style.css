@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff; /* Hintergrundfarbe des Containers */
+  }
+  
+  .box {
+    width: 45%; /* Breite der Boxen */
+    padding: 20px;
+    background-color: rgb(21, 96, 130); /* Hintergrundfarbe der Boxen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für 3D-Effekt */
+    border-radius: 5px; /* Abgerundete Ecken */
+    text-align: center; /* Zentriert den Text in den Boxen */
+  }
+  
+  .box h2 {
+    color: #ffffff; /* Farbe der Überschriften */
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    color: #ffffff; /* Farbe des Textes */
+    line-height: 1.6;
+  }
+
+  
+  .highlight {
+    color: rgb(255, 255, 0); /* Neon Gelb für hervorgehobene Begriffe */
+    font-weight: bold; /* Fettschrift für hervorgehobene Begriffe */
+  }
+
+  .box-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+    width: 100%; /* Anpassung der Breite auf volle Breite */
+    padding: 20px;
+    background-color: rgb(21, 96, 130); /* Dunkelblauer Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+    border-radius: 10px; /* Abgerundete Ecken */
+    text-align: center; /* Zentriert den Text */
+}
+
+.box-small h2 {
+    margin-bottom: 10px; /* Abstand unter den Überschriften */
+    color: #ffffff; /* Neon Gelb für die Überschriften */
+    width: 100%; /* Volle Breite für Überschriften, um den Text zu zentrieren */
+}
+
+.box-small p {
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    width: 100%; /* Volle Breite für Absätze, um den Text zu zentrieren */
+}
+
+#zentrierter-titel {
+    text-align: center;
+    width: 100%;
+    color: rgb(0, 0, 0); /* Weißer Text */
+    padding: 10px 0;
+  }
+
+  @media (max-width: 480px) { /* Für Smartphones */
+    #zentrierter-titel {
+        font-size: 20px; /* Verkleinert die Schrift des Titels */
+    }
+
+    .box {
+        flex: 0 1 100%; /* Box nimmt die ganze Breite ein */
+    }
+
+    .box h2 {
+        font-size: 18px; /* Verkleinert die Schrift der Überschriften */
+    }
+
+    .box p {
+        font-size: 14px; /* Verkleinert die Schrift der Paragraphen */
+    }
+}
