@@ -18,4 +18,4 @@ Here’s a preview of one of my web pages:
 
 An basic idea of mine is that my web pages are designed to be compatible with multiple browsers and devices:  
 
-![Compatibility](My Web-Pages%20should%20be%20compatible%20with.jpg)  
+![Compatibility](My-Web-Pages-should-be-compatible-with.jpg)
